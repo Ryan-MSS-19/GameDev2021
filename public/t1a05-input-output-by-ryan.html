@@ -1,3 +1,46 @@
 Version 0.0.1
 
 <h1 align=center> t1a05-input-output-ryan.html</h1>
+
+ store this input varible into x:
+<input id="myText01" type=text value=3 ><br><br>
+ 
+  <input type=button value="Show X" onclick="{
+x = document.getElementById('myText01').value
+//alert('x: '+ x)
+document.getElementById('mySpan01').innerHTML = 'X is '+x
+
+}"><br><br>
+
+Span output <span id="mySpan01" >...</Span><br><br>
+
+
+ store this input varible into x:
+<input id="myText02" type=text value=3 ><br><br>
+ 
+  <input type=button value="Square X" onclick="{
+x = document.getElementById('myText02').value
+//alert('x: '+ x)
+document.getElementById('mySpan02').innerHTML = x+' <b>squared</b> is ' +x*x
+
+}"><br><br>
+
+Span output <span id="mySpan02" >...</Span><br><br>
+
+
+1. Store this input variable into x:
+ <input id="myText01" type=text value=3 ><br><br>
+
+2. <input type=button value="run first" onclick="{
+	//x = 5
+
+	x = document.getElementById('myText01').value
+	alert('x: '+x)
+	// can you put it into the span????? instead of an alert
+
+}"><br><br>
+
+3. Span output <span id="mySpan01" >3</Span><br><br>
+
+
+
