@@ -1,15 +1,16 @@
 Version 0.0.1
 
-<h1 align=center> t1a07-decisions-by-ryan.html</h1>
+<h2 align=center> t1a07-decisions-by-ryan.html</h2>
 
 <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decisions if ... else statements
 Javascript innerHTML value by Ryan</a><br>
 Note: ! = Not, && = AND,    || = OR
 
-<h4< Example input output code</h4>
+<h4> Example input output code</h4>
 <pre>
 let myHour = 20 
 if (myHour < 18) {
+  let myGreeting = 'Good day';
 }
 </pre>
 
@@ -18,5 +19,45 @@ if (myHour < 18) {
 <input id ="myNum01" type=number value="4" ><br>
 
 <input type=button value="Simple if Statement for Decision Making" onclick="{
-  let myIn01
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
+  if (myIn01 >= 3){
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'                                                                          
+  
+   }
+}">
 
+<input type=button value="if...else" onclick="{
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
+  if (myIn01 >= 3){
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'    
+  } else {
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+}">
+
+<input type=button value="Comples if" onclick="{
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
+  if ((myIn01  != 3 || myIn01 > -3)  && myIn01 <=100 ){
+     document.getElementById('myDiv01'.innerHTML = myIn01 + ' is complex'                                          
+  } else {                                            
+     document.getElementById('myDiv01'.innerHTML = myIn01 + ' is not complex'                                          
+}">
+
+
+<div id ="myDiv01">...</div>
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
