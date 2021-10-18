@@ -31,7 +31,7 @@ For Global Mr. Ellis prefers document.myVarName
   document.getElementById('myText01').value
 }"><br>
 
-<div id="myDiv01">...</div>  
+<div id="myDiv01">...</div><br><br>  
  
 <br><br>  
 <input type=button value="easy variable" onClick="{
@@ -41,21 +41,25 @@ For Global Mr. Ellis prefers document.myVarName
  document.myZ = 8
  alert('myW = '+ myW)
  alert('myX = '+ myX)
-}">  
+}"> <br><br> 
     
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
 <body>
-<head>
-<style>
+	<h1>Demo: JavaScript Variables </h1>
 
-let message;
-message = 'Hello!';
+	<script>
+		var msg; 
+		msg = "Hello JavaScript!"; // assigned a string value
+		alert(msg); // access a variable
 
-alert(message); // shows the variable content
-
-</html>
+		//the following declares and assign a numeric value
+		var num = 100; 
+		var hundred = num;  // assigned a variable to varible
+		alert(num); // access a variable
+		alert(hundred); // access a variable
+    </script>
 </body>
-</head>
-</style>  
+</html>
+ 
+ 
