@@ -21,12 +21,12 @@ For Global Mr. Ellis prefers document.myVarName
 
 <input id ="myText01" type=text value="The dog " ><br>
 
-<input type=button value="Show Variable" onclick="{
+<input type=button value="Show Variable" onClick="{
   let myIn01 = document.getElementById('myText01').value
   document.getElementById('myDiv01').innerHTML = myIn01
 }"><br>
 
-<input type=button value="Using no variable" onclick="{
+<input type=button value="Using no variable" onClick="{
   document.getElementById('myDiv01').innerHTML = 
   document.getElementById('myText01').value
 }"><br>
