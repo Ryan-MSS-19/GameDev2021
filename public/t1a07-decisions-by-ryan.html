@@ -83,17 +83,17 @@ document.getElementById("demo").innerHTML = greeting;
 <html>
 <body>
 
-<img id="myImage" onclick="changeImage()" src="https://i.ytimg.com/vi/KISxq_dPDk8/maxresdefault.jpg" width="200" height="100">
+<img id="myImage" onclick="changeImage()" src="https://s1.dmcdn.net/v/33FvQ1KB-ZLki-Xwt/x1080" width="200" height="100">
 
 <p>Click the image to change it.</p>
 
 <script>
 function changeImage() {
   var image = document.getElementById("myImage");
-  if (image.src.match("https://s1.dmcdn.net/v/33FvQ1KB-ZLki-Xwt/x1080")) {
-    image.src = "https://i.ytimg.com/vi/KISxq_dPDk8/maxresdefault.jpg";
-  } else {
+  if (image.src.match("https://i.ytimg.com/vi/KISxq_dPDk8/maxresdefault.jpg")) {
     image.src = "https://s1.dmcdn.net/v/33FvQ1KB-ZLki-Xwt/x1080";
+  } else {
+    image.src = "https://i.ytimg.com/vi/KISxq_dPDk8/maxresdefault.jpg";
   }
 }
 </script>
