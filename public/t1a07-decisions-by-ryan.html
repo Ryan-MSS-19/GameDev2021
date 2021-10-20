@@ -111,15 +111,15 @@ function changeImage() {
 
 <p>I'm thinking of a letter. Guess which: a, b, c, d or e?</p>
 
-<input id="myInput" type="text">
+<input id="myInput1" type="text">
 
 <button onclick="myFunction()">Try it</button>
 
-<p id="demo"></p>
+<p id="demo1"></p>
 
 <script>
 function myFunction() {
-  var letter = document.getElementById("myInput").value;
+  var letter = document.getElementById("myInput1").value;
   var text;
 
   // If the letter is "c"
@@ -134,7 +134,7 @@ function myFunction() {
   } else {
     text = "Waaay off..";
   }
-  document.getElementById("demo").innerHTML = text;
+  document.getElementById("demo1").innerHTML = text;
 }
 </script>
 
