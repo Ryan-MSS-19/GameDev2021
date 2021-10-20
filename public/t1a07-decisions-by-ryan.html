@@ -109,7 +109,7 @@ function changeImage() {
 <html>
 <body>
 
-<p>I'm thinking of a number. Guess which: 1, 2, 3, 4 or 5?</p>
+<p>I'm thinking of a number from 1 - 100, try to guess which.</p>
 
 <input id="myInput1" type="text">
 
@@ -119,15 +119,15 @@ function changeImage() {
 
 <script>
 function myFunction() {
-  var number = document.getElementById("myInput1").value;
+  var letter = document.getElementById("myInput1").value;
   var text;
 
   // If the letter is "c"
-  if (number === "3") {
+  if (letter === "3") {
     text = "Good job you got it!";
     
   // If the letter is "b" or "d"
-  } else if (number === "2" || number === "4") {
+  } else if (letter === "2" || letter === "4") {
     text = "Nope...";
     
   // If the letter is anything else
