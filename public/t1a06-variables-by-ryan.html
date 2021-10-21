@@ -43,48 +43,14 @@ For Global Mr. Ellis prefers document.myVarName
  alert('myX = '+ myX)
 }"> <br><br> 
     
-<!DOCTYPE html>
-<html>
-<body>
-	<script>
-		var msg; 
-		msg = "Sorry for the alerts!"; 
-		alert(msg); 
-
-		
-		var num = 100; 
-		var hundred = num; 
-		alert(num); 
-		alert("stored = hundred"); 
-    </script>
-</body>
-</html>
 
 
 
-<html>
-<body>
-	<script> 
-<div id="game">
-    <button onClick="choose('rock')">Rock</button>
-    <button onClick="choose('paper')">Paper</button>
-    <button onClick="choose('scissors')">Scissors</button>
-    <div id="result"></div>
-    <br>
-    <br>
-    <button onClick="test()">DEBUG</button>
-</div>
+<button>Press me</button>
+Copy to Clipboard
+const button = document.querySelector('button');
 
-
-var user;
-function choose(choice){
-    user = choice;
+button.onclick = function() {
+  let name = prompt('What is your name?');
+  alert('Hello ' + name + ', nice to see you!');
 }
-
-function test(click){
-    alert("You chose " + user);
-} 
-	</script>	
-</html>
-</body>
-	
