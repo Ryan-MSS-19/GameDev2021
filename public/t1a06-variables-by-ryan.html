@@ -59,65 +59,7 @@ button.onclick = function() {
 
     </script>      
 </html>
-</body>
-
-
-<br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3> Create Variables </h3>
-<input id="myText" type=text value= x>
-
-<input id="MyButtonOne" type=button value="Button01" onclick="{
-
-let myX = document.getElementById('myText').value
-document.getElementById('Div1').innerHTML += myX +'<br>'
-
-
-
-}">
-
-<div id="Div1"></div>
-<br><br>
-
-
-
-
-<h3>Create More Variables</h3>
-<input id="myText1" type=text value= Var>
-
-<input id="MyButtonOne" type=button value="Button02" onclick="{
-
-let myX = document.getElementById('myText1').value
-document.getElementById('Div2').innerHTML += myX +'<br>'
-
-
-
-}">
-
-<div id="Div2"></div>
-<br>
-
-
-
-
+</body><br><br><br>
 
 True or False <br>
 <input id="true1" type=button value=True onclick="{
@@ -132,7 +74,47 @@ document.getElementById('Div3').innerHTML = 'Not Bingo!'
 
 
 }">
-<div id="Div3">...</div>
+<div id="Div3">...</div><br><br>
+
+
+
+
+
+
+
+
+
+<br>
+
+
+<h3> creates multiple variables </h3>
+
+
+<input id="myText" type=text value= x>
+
+<input id="MyButtonOne" type=button value="Create X" onclick="{
+
+let myX = document.getElementById('myText').value
+document.getElementById('Div1').innerHTML += myX +'<br>'
+
+}">
+
+<div id="Div1"></div>
+<br><br>
+
+<input id="myText1" type=text value= Var>
+
+<input id="MyButtonOne" type=button value="Create Var" onclick="{
+
+let myX = document.getElementById('myText1').value
+document.getElementById('Div2').innerHTML += myX +'<br>'
+
+}">
+
+<div id="Div2"></div>
+<br>
+
+
 
 
 
