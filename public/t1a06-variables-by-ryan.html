@@ -60,4 +60,134 @@ button.onclick = function() {
     </script>      
 </html>
 </body>
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input id="myText" type=text value= x>
+
+<input id="MyButtonOne" type=button value="Button01" onclick="{
+
+let myX = document.getElementById('myText').value
+document.getElementById('Div1').innerHTML += myX +'<br>'
+
+
+
+}">
+
+<div id="Div1"></div>
+<br><br>
+
+
+
+
+
+<input id="myText1" type=text value= TheXValue>
+
+<input id="MyButtonOne" type=button value="Button02" onclick="{
+
+let myX = document.getElementById('myText1').value
+document.getElementById('Div2').innerHTML += myX +'<br>'
+
+
+
+}">
+
+<div id="Div2"></div>
+<br>
+
+
+
+
+
+True or False Variable<br>
+<input id="true1" type=button value=True onclick="{
+
+document.getElementById('Div3').innerHTML = 'Correct'
+
+}">
+<input id="false1" type=button value=False onclick="{
+
+
+document.getElementById('Div3').innerHTML = 'Incorrect'
+
+
+}">
+<div id="Div3">...</div>
+
+
+
+Variable<br>
+
+<input id="myText4" type=number value= 12>
+
+<input id="Shows Value" type=button value="Submit" onclick="{
+
+let myX = document.getElementById('myText4').value
+document.getElementById('Div4').innerHTML = myX
+
+
+
+}">
+
+<div id="Div4"></div>
+<br>
+<br>
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"> </script>
+
+ 
+<input id="myButton05" type="button" value="Functions that have Multiple Variables that return as an Object" onclick="{  
+                                                                 
+   let {myFoo, myBar} = (function(){
+      return {myFoo: 10, myBar: 1000}
+   })();
+ 
+   document.getElementById('myDiv05').innerHTML = 'Variable myFoo = ' + myFoo  + ' and variable myBar = ' + myBar                                                                      
+}"><br><br>
+
+<div id='myDiv05'>...</div><br>  
+<br>
+<br>
+ 
+  Negative Variables<br>
+<input id="myText10" type=number value= 41>-
+<input id="myText11" type=number value= 55>=
+<input id="myText12" type=number value= 76>
+<input id="MyButtonOne" type=button value="Submit" onclick="{
+let myy = document.getElementById('myText10').value
+let myX = document.getElementById('myText11').value
+let myW = document.getElementById('myText12').value
+document.getElementById('Div7').innerHTML = ((parseFloat(myy)) - (parseFloat(myX))- (parseFloat(myW)))
+
+
+
+}">
+
+<div id="Div7"></div>
+<br>
+
+ 
+ <button onclick="document.getElementById('myDiv07').innerHTML=Date()">6.Events</button>
+
  
