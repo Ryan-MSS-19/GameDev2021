@@ -82,7 +82,7 @@ button.onclick = function() {
 
 
 
-
+<h3> Create Variables </h3>
 <input id="myText" type=text value= x>
 
 <input id="MyButtonOne" type=button value="Button01" onclick="{
@@ -100,7 +100,7 @@ document.getElementById('Div1').innerHTML += myX +'<br>'
 
 
 
-
+<h3>Create More Variables</h3>
 <input id="myText1" type=text value= Var>
 
 <input id="MyButtonOne" type=button value="Button02" onclick="{
@@ -119,16 +119,16 @@ document.getElementById('Div2').innerHTML += myX +'<br>'
 
 
 
-True or False Variable<br>
+True or False <br>
 <input id="true1" type=button value=True onclick="{
 
-document.getElementById('Div3').innerHTML = 'Correct'
+document.getElementById('Div3').innerHTML = 'Bingo!'
 
 }">
 <input id="false1" type=button value=False onclick="{
 
 
-document.getElementById('Div3').innerHTML = 'Incorrect'
+document.getElementById('Div3').innerHTML = 'Not Bingo!'
 
 
 }">
@@ -157,16 +157,16 @@ document.getElementById('Div4').innerHTML = myX
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"> </script>
 
  
-<input id="myButton05" type="button" value="Functions that have Multiple Variables that return as an Object" onclick="{  
-                                                                 
-   let {myFoo, myBar} = (function(){
-      return {myFoo: 10, myBar: 1000}
-   })();
- 
-   document.getElementById('myDiv05').innerHTML = 'Variable myFoo = ' + myFoo  + ' and variable myBar = ' + myBar                                                                      
-}"><br><br>
+// <input id="myButton05" type="button" value="Functions that have Multiple Variables that return as an Object" onclick="{  
+//                                                                
+//   let {myFoo, myBar} = (function(){
+//      return {myFoo: 10, myBar: 1000}
+//   })();
+// 
+//   document.getElementById('myDiv05').innerHTML = 'Variable myFoo = ' + myFoo  + ' and variable myBar = ' + myBar                                                                      
+//}"><br><br>
 
-<div id='myDiv05'>...</div><br>  
+//<div id='myDiv05'>...</div><br>  
 <br>
 <br>
  
