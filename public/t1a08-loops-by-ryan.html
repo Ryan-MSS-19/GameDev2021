@@ -44,23 +44,179 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 <br>
 <br>  
 
-<!DOCTYPE html>
-<html>
-<body>
+
+
+
+
+
+ 
+ 
+
+
+Max loops: <input id="myNum01" type=number value="10" ><br>
+
+<input type=button value="Basic For loop with Decisions" onclick="{
+ document.getElementById('myDiv01').innerHTML = ' '
+ let myTemp = ''
+ 
+ let myMax = parseInt(document.getElementById('myNum01').value)
+ 
+ for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+ 
+ if (myLoop * 2 > myMax){
+ myTemp += 'cool '
+ }
+ 
+ myTemp += 'Loop number: ' + myLoop + '<br>' 
+ }
+ document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+
+
+<input type=button value="basic for loop only" onclick="{
+ let myTemp = ''
+ let myMax = parseInt(document.getElementById('myNum01').value)
+ for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+ myTemp += 'Loop number: ' + myLoop + '<br>'
+ }
+ document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+
+
+<input type=button value="Even number identifier" onclick="{
+ document.getElementById('myDiv01').innerHTML = ''
+ let myTemp = ''
+ 
+ let myMax = parseInt(document.getElementById('myNum01').value)
+ 
+ for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+ 
+ if (myLoop % 2 == 0){
+ myTemp += 'Even Number, '
+ }
+ 
+ myTemp += 'Loop number: ' + myLoop + '<br>'
+ }
+ document.getElementById('myDiv01').innerHTML = myTemp
+ }">
+ 
+ 
+<input type=button value="Odd number identifier" onclick="{
+ document.getElementById('myDiv01').innerHTML = ''
+ let myTemp = ''
+ 
+ let myMax = parseInt(document.getElementById('myNum01').value)
+ 
+ for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+ 
+ if (myLoop % 2 == 1){
+ myTemp += 'Odd Number, '
+ }
+ 
+ myTemp += 'Loop number: ' + myLoop + '<br>'
+ }
+ document.getElementById('myDiv01').innerHTML = myTemp
+ }">
+ 
+ <div id="myDiv01"><font color=red>...</font></div>
+
+ <br>
+ <br>
+ <br>
+ <br>
+
+Loop this many times <input type="number" id="myTextLoop" value="35" size="10"> 
+ 
+<input id="myButton02" type="button" value="For Loop" onclick="{
+ 
+ document.getElementById('myDiv02').innerHTML = '' // blank out the DIV 
+ 
+ for (myLoop = 0; myLoop <= document.getElementById('myTextLoop').value; myLoop++){ 
+ 
+ document.getElementById('myDiv02').innerHTML += 'Loop #'+ myLoop+'<br>' 
+ 
+ }
+ 
+}"><br><br>
+
+<div id='myDiv02'>...</div><br>
+
+<br>
+<br>
 
 <p id="demo"></p>
 
 <script>
-const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-
 let text = "";
-for (let i = 0; i < cars.length; i++) {
-  text += cars[i] + "<br>";
+
+for (let i = 0; i < 5; i++) {
+ text += "The number is " + i + "<br>";
 }
 
 document.getElementById("demo").innerHTML = text;
 </script>
 
-</body>
-</html>
+<br>
+<br>
+<br>
+<br> 
 
+StartLoop <input id="Loop01" type=number value="20"><br>
+
+<input type=button value="loop with Decisions" onclick="{
+let myTemp = ''
+let MyMax = parseInt(document.getElementById('Loop01').value)
+for(let myLoop = MyMax; myLoop > 0-1; myLoop--){
+myTemp += myLoop +'<br>' 
+ 
+document.getElementById('myDiv03').innerHTML = myTemp
+}
+}">
+
+
+<div id ="myDiv03">..</div>
+<br>
+
+
+Loop X <input id="Loop04" type=number value="3"><br>
+Loop This Many Of Times <input id="Loop05" type=number value="6"><br>
+
+
+
+
+<input type=button value="Loop X Amount of Times" onclick="{
+let myTemp='';
+let MyMax1 = parseInt(document.getElementById('Loop04').value)
+let MyMax2 = parseInt(document.getElementById('Loop05').value)
+for(let myLoop001 = 0; myLoop001 < MyMax2; myLoop001++){
+for(let myLoop02 = 1; myLoop02 <= MyMax1; myLoop02++){
+document.getElementById('myDiv04').innerHTML = myTemp
+myTemp += + myLoop02 +' <br>';
+}
+document.getElementById('myDiv04').innerHTML = myTemp
+}
+}">
+
+
+
+<div id ="myDiv04">..</div>
+
+<br>
+
+Start of the Loop <input id="MyLOOP2" type=number value="4"><br>
+End of The Loop <input id="MyLOOP3" type=number value="40"><br>
+
+<input type=button value="Basic For loop with Decisions" onclick="{
+let myTemp = ''
+let MyMax = parseInt(document.getElementById('MyLOOP3').value)
+let MyStart = parseInt(document.getElementById('MyLOOP2').value)
+for(let myLoop = MyStart; myLoop < MyMax+1; myLoop++){
+myTemp += myLoop +'<br>'
+document.getElementById('myDiv05').innerHTML = myTemp
+}
+}">
+
+
+<div id ="myDiv05">..</div>
