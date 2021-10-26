@@ -1,5 +1,27 @@
 Version 0.0.1
 
-<input type=button value="onclick"onclick="{alert('hi')}">
+<input type=button value="onclick"onclick="{alert('hi')}"><br><br>
        
-<b onclick="{alert('go')}">click</b>
+<b onclick="{alert('go')}">click</b><br><br>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://w7.pngwing.com/pngs/285/139/png-transparent-elephant-animal-africa-transparent-background-white-background.png" alt="Smiley" width="200" height="150">
+
+
+<script>
+function bigImg(x) {
+  x.style.height = "300px";
+  x.style.width = "400px";
+}
+
+function normalImg(x) {
+  x.style.height = "150px";
+  x.style.width = "200px";
+}
+</script>
+
+</body>
+</html>
