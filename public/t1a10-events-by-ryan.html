@@ -239,3 +239,39 @@ document.addEventListener("msfullscreenchange", function() {
 </html><hr> <br><br><br>
 
        
+       
+       
+       
+       
+       
+ <h3> onChange</h3>       
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="1">Audi</option>
+  <option value="2">BMW</option>
+  <option value="3">Mercedes</option>
+  <option value="4">Volvo</option>
+</select>
+
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>
+
+       
+       
+       
