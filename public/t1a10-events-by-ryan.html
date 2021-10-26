@@ -1,4 +1,4 @@
-Version 1.0.0<br>
+Version 1.0.0<br>boo
 <h1 align=center>t1a10-events-by-ryan.html</h1><br><br>
 
 
@@ -155,11 +155,11 @@ function drop(event) {
 <html>
 <body>
 
-Enter your name: <input type="text" onfocus="myFunction(this)">
+Enter your name: <input type="text" onfocus="myFunction(this)1">
 
 
 <script>
-function myFunction(x) {
+function myFunction() {
   x.style.background = "purple";
 }
 </script>
@@ -251,7 +251,7 @@ document.addEventListener("msfullscreenchange", function() {
 
 
 
-<select id="mySelect1" onchange="myFunction()">
+<select id="mySelect1" onchange="myFunction()2">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -263,9 +263,9 @@ document.addEventListener("msfullscreenchange", function() {
 <p id="demo1"></p>
 
 <script>
-function myFunction(y) {
-  var y = document.getElementById("mySelect1").value;
-  document.getElementById("demo1").innerHTML = "You selected: " + y;
+function myFunction() {
+  var x = document.getElementById("mySelect1").value;
+  document.getElementById("demo1").innerHTML = "You selected: " + x;
 }
 </script>
 
@@ -284,12 +284,12 @@ function myFunction(y) {
 <html>
 <body>
 
-<p ondblclick="myFunction(z)">Double-click</p>
+<p ondblclick="myFunction()3">Double-click</p>
 
 <p id="demo2"></p>
 
 <script>
-function myFunction(z) {
+function myFunction() {
   document.getElementById("demo2").innerHTML = "Hello";
 }
 </script>
@@ -309,12 +309,12 @@ function myFunction(z) {
 <html>
 <body>
 
-<input type="text" oncopy="myFunction(q)" value="Copy this text">
+<input type="text" oncopy="myFunction4()" value="Copy this text">
 
 <p id="demo3"></p>
 
 <script>
-function myFunction(q) {
+function myFunction() {
   document.getElementById("demo3").innerHTML = "Copied.";
 }
 </script>
