@@ -1,11 +1,11 @@
-Version 0.1.8<br>
+Version 1.0.0<br>
 <h1 align=center>t1a10-events-by-ryan.html</h1><br><br>
 
 
 
 
 
-
+<hr>
 <h3>onclicks:<h3><br>
 <input type=button value="onclick"onclick="{alert('hi')}"><br>
        
@@ -300,6 +300,28 @@ function myFunction() {
        
        
        
+       
+       
+
+       
+       <h3>onCopy:</h3>       
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" oncopy="myFunction()" value="Copy this text">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Copied."
+}
+</script>
+
+</body>
+</html><hr>
+<br><br><br>
        
        
        
