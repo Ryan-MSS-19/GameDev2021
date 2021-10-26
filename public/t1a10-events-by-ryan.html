@@ -177,7 +177,7 @@ function myFunction(x) {
        
        
        
-<h3>onFullScreenChange</h3><br>      
+<h3>onOpenFullScreen/onCloseFullScreen</h3><br>      
 <!DOCTYPE html>
 <html>
 <head>
@@ -192,12 +192,9 @@ function myFunction(x) {
 </head>
 <body>
 
-<h2>Fullscreen with JavaScript</h2>
-<p>Click on the button to open this page in fullscreen mode.</p>
 <button onclick="openFullscreen();">Go Fullscreen Mode</button>
 <button onclick="closeFullscreen();">Close Fullscreen</button>
-<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-<p id="myP">I will display the event that was fired!</p>
+ <p id="myP"></p>
 
 <script>
 /* Get the element you want displayed in fullscreen */ 
