@@ -1,5 +1,6 @@
-Version 0.0.1
+Version 0.0.1<br><br>
 
+<h3>onclicks<h3><br>
 <input type=button value="onclick"onclick="{alert('hi')}"><br><br>
        
 <b onclick="{alert('go')}">click</b><br><br>
@@ -9,8 +10,9 @@ Version 0.0.1
 <body>
 
 <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://w7.pngwing.com/pngs/285/139/png-transparent-elephant-animal-africa-transparent-background-white-background.png" alt="Smiley" width="200" height="150">
+<br><br>
 
-
+<h3> onMouseOver</h3><br>
 <script>
 function bigImg(x) {
   x.style.height = "300px";
@@ -20,6 +22,30 @@ function bigImg(x) {
 function normalImg(x) {
   x.style.height = "150px";
   x.style.width = "200px";
+}
+</script>
+
+</body>
+</html>
+
+
+
+<h3> onMouseUp</h3>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets the color of the text to green.
+</p>
+
+<script>
+function mouseDown() {
+  document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("myP").style.color = "green";
 }
 </script>
 
