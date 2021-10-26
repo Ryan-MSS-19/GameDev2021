@@ -263,9 +263,9 @@ document.addEventListener("msfullscreenchange", function() {
 <p id="demo1"></p>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("mySelect1").value;
-  document.getElementById("demo1").innerHTML = "You selected: " + x;
+function myFunction(y) {
+  var y = document.getElementById("mySelect1").value;
+  document.getElementById("demo1").innerHTML = "You selected: " + y;
 }
 </script>
 
@@ -284,12 +284,12 @@ function myFunction() {
 <html>
 <body>
 
-<p ondblclick="myFunction()">Double-click</p>
+<p ondblclick="myFunction(z)">Double-click</p>
 
 <p id="demo2"></p>
 
 <script>
-function myFunction() {
+function myFunction(z) {
   document.getElementById("demo2").innerHTML = "Hello";
 }
 </script>
@@ -309,12 +309,12 @@ function myFunction() {
 <html>
 <body>
 
-<input type="text" oncopy="myFunction1()" value="Copy this text">
+<input type="text" oncopy="myFunction(q)" value="Copy this text">
 
 <p id="demo3"></p>
 
 <script>
-function myFunction1() {
+function myFunction(q) {
   document.getElementById("demo3").innerHTML = "Copied.";
 }
 </script>
