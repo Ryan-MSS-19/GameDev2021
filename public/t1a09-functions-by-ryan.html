@@ -58,113 +58,26 @@ function my GrabNumber(){
 
 
 
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
 
 <script>
- 
-function myExampleFunction(){
- let myIn01 = parseInt(document.getElementById('myText01').value)
- let mySum = myIn01 + myIn01
- let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
- return myReply
- 
-}
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
 
-
-</script>
-
-
-
-
-
-
-
- 
-
-
-<br> 
-<br> 
-<br> 
-<br> 
- 
-<script>
- 
-function myAll3Functions(){ 
- document.getElementById('myDiv02').innerHTML = 'This line was made by the main function. <br><br>'
- let myInline = (function() { 
- return 'This line was made using an inline function <br><br>'
- } )()
- let myArrow = (() => { 
- return 'This line was made using an arrow function. <br><br>'
- } )() 
- 
- document.getElementById('myDiv02').innerHTML += myInline + myArrow
-}
- 
-</script> 
- 
-<input id="myButton02" type="button" value="All three Functions together" onclick="{ 
- 
- myAll3Functions() 
- 
-}"><br><br>
-
-<div id='myDiv02'>...</div><br>
-
-<br>
-<br>
-<br>
-<br>
- 
-<input id="myButton03" type="button" value="Make and use a function" onclick="{
-function myFun(myVar){
- document.getElementById('myDiv03').innerHTML = 'The function made this line. ' + myVar + ' was passed to the function <br>' 
-} 
- 
-myFun('600') // This activates the function 
- 
-}"><br><br>
-
-<div id='myDiv03'>...</div><br>
- 
-<br>
-<br>
-
-
-
-<br><br>
-Change Colour
-<br>
-<input type=button value="ChangeColour" onclick="{
-myChangeColor()
-}">
-
-
-<input type=button value="ChangeColour" onclick="{
-myChangeColorBack()
-}">
-
-<h2 id="myChange" style="color:black;"> This Text Changes Colour </h2>
-
-<br><br><br>
-<br><br><br> 
- 
-<script>
-function myBasicFun(){
- document.getElementById('myDiv05').innerHTML = "Have a Great Day"
-}
- 
-function myAdvancedFun(x,y){
- return x*y
+function myFunction(a, b) {
+  return a * b;
 }
 </script>
 
-<input id="myText02" type=text value=50 ><br><br>
-<input type=button value="Function" onclick="{
- //alert('button works')
- myBasicFun()
-}"><br><br>
-<input type=button value="Button05" onclick="{
- document.getElementById('myDiv05').innerHTML = myAdvancedFun(50,50)
-}"><br><br>
-<div id="myDiv05" >...</div><br><br>
+</body>
+</html>
+
+
