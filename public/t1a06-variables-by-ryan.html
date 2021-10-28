@@ -159,8 +159,82 @@ document.getElementById('Div7').innerHTML = ((parseFloat(myy)) - (parseFloat(myX
 }">
 
 <div id="Div7"></div>
-<br>
+<br><br><br>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<body>
+  
+<input id="numb" type="number" align="center">
+
+<button type="button" onclick="myFunction()" id="primary" align="center">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text="Fantasy World";
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    if (x == 1 && document.getElementById("confirm")==null) {
+        text = "Fantasy World";
+        var demo=document.getElementById("demo");
+        var span=document.createElement("span");
+
+        span.innerHTML="<button onclick='confirmMessage()' id='confirm'>Confirm</button>";
+        document.body.appendChild(span);
+    } 
+    if (x == 2) {
+    text = "Sir Wags A Lot";
+    }
+    if (x == 3) {
+    text = "Take a Path";
+    }
+    if (x == 4) {
+    text = "River Clean Up"
+    }
+    if (x == 5) {
+    text = "Pinball"
+    }
+    if (x == 6) {
+    text = "Ghost Girl"
+    }
+    if (x == 7) {
+    text = "Dress Up"
+    }
+    if (x == 8) {
+    text = "Where Is My Hat?"
+    }
+    if (isNaN(x) || x < 1 || x > 8) {
+         text = "Input not valid";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+}
+function confirmMessage()
+{
+  alert("Confirmed order");
+}
+</script>
+</html>
+</body>
 
 
  
