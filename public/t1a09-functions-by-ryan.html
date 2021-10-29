@@ -203,12 +203,12 @@ document.getElementById('myChange').style.color = 'orange'
 <script>
  
 function myAll3Functions(){ 
- document.getElementById('myDiv02').innerHTML = 'This line was made by the main function. <br><br>'
+ document.getElementById('myDiv02').innerHTML = 'made by main function. <br><br>'
  let myInline = (function() { 
- return 'This line was made using an inline function <br><br>'
+ return ' made using inline function <br><br>'
  } )()
  let myArrow = (() => { 
- return 'This line was made using an arrow function. <br><br>'
+ return 'made using arrow function. <br><br>'
  } )() 
  
  document.getElementById('myDiv02').innerHTML += myInline + myArrow
@@ -216,7 +216,7 @@ function myAll3Functions(){
  
 </script> 
  
-<input id="myButton02" type="button" value="All three Functions together" onclick="{ 
+<input id="myButton02" type="button" value="Triple Function" onclick="{ 
  
  myAll3Functions() 
  
