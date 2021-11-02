@@ -1,4 +1,4 @@
-Version 0.0.3
+Version 0.0.4
 
 <h2 align=center>t2a01-arrays-by-ryan.html</h2>
 
@@ -16,7 +16,7 @@ Arrays are stored numbered variables.
 
 <h3> Example working Array code</h4>
 
-Max Array Entry:<input type=text id="myText01" value="3"><br>
+Max Array Entry: <input type=text id="myText01" value="3"><br>
 
 <input type=button value="Example onClick" onClick="{
   let myTemp = document.getElementById('myText01').value
@@ -29,7 +29,9 @@ Max Array Entry:<input type=text id="myText01" value="3"><br>
   myArray[2] = 'Zizzy' 
 
   for (let myLoop=0; myLoop < myTemp; myLoop++){
-   mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+    mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+  }
+  document.getElementById('myDiv01').innerHTML = mySum
 }">
 
 <div id="myDiv01">...</div>
