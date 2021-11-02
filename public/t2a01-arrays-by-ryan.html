@@ -1,2 +1,20 @@
 Version 0.0.1
+<!DOCTYPE HTML>
+<html>
+<body>
+  
+  <script>
+//Array with some items
+var buttons = ["Shoes", "Purses", "Dresses", "Shirts"];
 
+function makeButtons(c) {
+  for (var i = 0; i < c.length; i++) {
+    $('.button-holder').append('<button value=' + c[i] + '>' + c[i] +
+      '</button>');
+  }
+}
+
+makeButtons(buttons);
+  </script>
+</body>
+</html>
