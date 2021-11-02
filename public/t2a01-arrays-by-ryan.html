@@ -19,17 +19,17 @@ Arrays are stored numbered variables.
 Max Array Entry:<input type=text id="myText01" value="3"><br>
 
 <input type=button value="Example onClick" onClick="{
-let myTemp = document.getElementById('myText01').value
-let mySum = ''
-document.getElementById('myDiv01').innerHTML = ' '
+  let myTemp = document.getElementById('myText01').value
+  let mySum = ''
+  document.getElementById('myDiv01').innerHTML = ' '
                                                     
-myArray = new Array()
-myArray[0] = 'Fred'                                                    
-myArray[1] = 'Mary' 
-myArray[2] = 'Zizzy' 
+  myArray = new Array()
+  myArray[0] = 'Fred'                                                    
+  myArray[1] = 'Mary' 
+  myArray[2] = 'Zizzy' 
 
-for (let myLoop=0; myLoop < myTemp; myLoop++){
-  mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+  for (let myLoop=0; myLoop < myTemp; myLoop++){
+   mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
 }">
 
 <div id="myDiv01">...</div>
@@ -37,52 +37,3 @@ for (let myLoop=0; myLoop < myTemp; myLoop++){
 
 <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE HTML>
-<html>
-<body>
-  
-  <script>
-//Array with some items
-var buttons = ["Shoes", "Purses", "Dresses", "Shirts"];
-
-function makeButtons(c) {
-  for (var i = 0; i < c.length; i++) {
-    $('.button-holder').append('<button value=' + c[i] + '>' + c[i] +
-      '</button>');
-  }
-}
-
-makeButtons(buttons);
-  </script>
-</body>
-</html>
