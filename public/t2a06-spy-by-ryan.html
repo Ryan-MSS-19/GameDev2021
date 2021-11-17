@@ -35,6 +35,7 @@ Version 0.0.7
    if (myString[myLoop] == 'x') {myTemp  = 'c'} 
    if (myString[myLoop] == 'y') {myTemp  = 'b'} 
    if (myString[myLoop] == 'z') {myTemp  = 'a'} 
+   if (myString[myLoop] == ' ') {myTemp  = ';'}                                         
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
@@ -75,6 +76,7 @@ Version 0.0.7
    if (myString[myLoop] == 'c') {myTemp  = 'x'} 
    if (myString[myLoop] == 'b') {myTemp  = 'y'} 
    if (myString[myLoop] == 'a') {myTemp  = 'z'} 
+   if (myString[myLoop] == ';') {myTemp  = ' '}                                          
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea03').value = myString.join('')
