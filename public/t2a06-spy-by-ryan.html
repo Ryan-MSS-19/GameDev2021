@@ -22,16 +22,16 @@ Version 0.0.4
 
 <input type=button value="decrypt" onclick="{
  let myTemp = ''
-   myString = document.getElementById('myArea03').value.split('')
+   myString = document.getElementById('myArea43').value.split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'f') {myTemp  = 'e'} 
       if (myString[myLoop] == 'i') {myTemp  = 'h'} 
       myString[myLoop] = myTemp
    }
-   document.getElementById('myArea03').value = myString.join('')
+   document.getElementById('myArea43').value = myString.join('')
 }"><br><br>
 
 
 
-<textarea id="myArea03" rows=4 cols=70></textarea><br> 
+<textarea id="myArea43" rows=4 cols=70></textarea><br> 
