@@ -21,8 +21,17 @@ Version 0.0.2
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   alert('Sorry, you have to do this!')
+ let myTemp = ''
+   myString = document.getElementById('myArea03').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'i') {myTemp  = 'h'} 
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea03').value = myString.join('')
 }"><br><br>
+
 
 
 <textarea id="myArea03" rows=4 cols=70></textarea><br> 
