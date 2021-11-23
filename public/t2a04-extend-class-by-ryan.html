@@ -1,5 +1,3 @@
-
-
 <script>
 
 class myAnimal {
@@ -8,9 +6,9 @@ class myAnimal {
     this.myAge = passAge;
   }
   myShow(){
-    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '.You are ' + this.myAge = ' years old<br>'
+    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName+'<br>'
   }
-} // end class myAnimal
+}  // end class myAnimal
   
 </script>
 
@@ -55,8 +53,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
   class myCat extends myAnimal {
     myShow(){
-      document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years
- old<br>'
+      document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
       }
  }    // end extended class myCat
                                                                 
