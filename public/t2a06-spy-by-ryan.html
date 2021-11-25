@@ -46,9 +46,7 @@ Version 0.1.2
    if (myString[myLoop] == '8') {myTemp  = '#'}                                            
    if (myString[myLoop] == '9') {myTemp  = '@'}                                             
    if (myString[myLoop] == '0') {myTemp  = '!'} 
-   if (myString[myLoop] == ',') {myTemp  = '.'} 
-   if (myString[myLoop] == '/') {myTemp  = '>'}
-   if (myString[myLoop] == '\') {myTemp  = '<'}                                          
+                                        
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
@@ -100,9 +98,6 @@ Version 0.1.2
    if (myString[myLoop] == '#') {myTemp  = '8'}                                            
    if (myString[myLoop] == '@') {myTemp  = '9'}                                             
    if (myString[myLoop] == '!') {myTemp  = '0'}  
-   if (myString[myLoop] == '.') {myTemp  = ','} 
-   if (myString[myLoop] == '>') {myTemp  = '/'}
-   if (myString[myLoop] == '<') {myTemp  = '\'} 
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea03').value = myString.join('')
