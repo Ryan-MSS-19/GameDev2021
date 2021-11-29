@@ -75,22 +75,22 @@ document.getElementById('myImg01').style.left = parseInt(document.getElementById
 
        <script type="text/javascript">
 
-            function APressed() {
+            function "A" Pressed() {
                 var element = document.getElementById("image1");
                 element.style.left = parseInt(element.style.left) - 5 + 'px';
             }
 
-            function DPressed() {
+            function "D" Pressed() {
                 var element = document.getElementById("image1");
                 element.style.left = parseInt(element.style.left) + 5 + 'px';
             }
 
-            function WPressed() {
+            function "W" Pressed() {
                 var element = document.getElementById("image1");
                 element.style.top = parseInt(element.style.top) - 5 + 'px';
             }
 
-            function SPressed() {
+            function "S" Pressed() {
                 var element = document.getElementById("image1");
                 element.style.top = parseInt(element.style.top) + 5 + 'px';
             }
@@ -98,19 +98,19 @@ document.getElementById('myImg01').style.left = parseInt(document.getElementById
             function moveSelection(event) {                    
                 switch (event.keyCode) {
                     case 37:
-                        leftArrowPressed();
+                        "A" Pressed();
                     break;
 
                     case 39:
-                        rightArrowPressed();
+                        "D" Pressed();
                     break;
 
                     case 38:
-                        upArrowPressed();
+                        "W" Pressed();
                     break;
 
                     case 40:
-                        downArrowPressed();
+                        "S" Pressed();
                     break;
                 }
             };
