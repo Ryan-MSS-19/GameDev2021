@@ -1,4 +1,4 @@
-Version 0.0.2
+Version 0.0.3
 <br><br>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 50%" background="https://piskel-imgstore-b.appspot.com/img/46e42594-4c9d-11ec-972a-d745f73e978d.gif">
@@ -27,4 +27,110 @@ Version 0.0.2
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
 
-<img id="myImage01" style="position:relative; width:250px; height:200px; top:500px; left:0px;" src="https://piskel-imgstore-b.appspot.com/img/552989f5-4985-11ec-aa25-c7741cf303a2.gif">
+<img id="myImage01" style="position:relative; width:250px; height:200px; top:500px; left:0px;" src="https://piskel-imgstore-b.appspot.com/img/552989f5-4985-11ec-aa25-c7741cf303a2.gif" id="myImg01" />
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+<table border=1> 
+
+<tr><td><input type=button value="Top Left" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10  
+document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10}"></td>                                                      <td><input type=button value="Top" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 }">                       </td><td><input type=button value="Top Right" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10  
+                                                                                                                                                                                                                                                                                                                                                              document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10}"></td>
+
+<tr><td><input type=button value="Left" onclick="{ document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 }"></td>       <td><input type=button value="Reset" onclick="{ document.getElementById('myImg01').style.setposition = parseInt(document.getElementById(myImg01').style.setposition) setposition= top: 200 left: 200 }"></td>
+
+                                                                                                                                                                                                                                                                                                                                                             <td><input type=button value="Right" onclick="{ document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 }"></td>
+
+<tr><td><input type=button value="Down Left" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10  
+document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10}"></td>                                                      <td><input type=button value="Down" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 }">                      </td><td><input type=button value="Down Right" onclick="{ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10  
+                                                                                                                                                                                                                                                                                                                                                              document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10}"></td>
+</table>
+
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    
+
+
+
+       <script type="text/javascript">
+
+            function leftArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+
+            function rightArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.left = parseInt(element.style.left) + 5 + 'px';
+            }
+
+            function upArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+
+            function downArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+
+            function moveSelection(event) {                    
+                switch (event.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                    break;
+
+                    case 39:
+                        rightArrowPressed();
+                    break;
+
+                    case 38:
+                        upArrowPressed();
+                    break;
+
+                    case 40:
+                        downArrowPressed();
+                    break;
+                }
+            };
+
+        function gameLoop()
+        {
+            // change position based on speed
+            moveSelection();
+            setTimeout("gameLoop()",10);
+        }
+
+  </script>
+  </head>
+
+  <body onload="gameLoop();" onkeydown="" onkeyup="moveSelection(event)" bgcolor='yellow'>
+   
+ 
+  </body>
+   
+</html>
+
+
+
