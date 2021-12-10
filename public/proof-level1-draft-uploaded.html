@@ -1,5 +1,74 @@
 <font color=white> Version 0.1.0 </font>
 
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    
+
+
+
+       <script type="text/javascript">
+
+            function leftArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+
+            function rightArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.left = parseInt(element.style.left) + 5 + 'px';
+            }
+
+            function upArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+
+            function downArrowPressed() {
+                var element = document.getElementById("image1");
+                element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+
+            function moveSelection(event) {                    
+                switch (event.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                    break;
+
+                    case 39:
+                        rightArrowPressed();
+                    break;
+
+                    case 38:
+                        upArrowPressed();
+                    break;
+
+                    case 40:
+                        downArrowPressed();
+                    break;
+                }
+            };
+
+        function gameLoop()
+        {
+            // change position based on speed
+            moveSelection();
+            setTimeout("gameLoop()",10);
+        }
+
+  </script>
+  </head>
+
+  <body onload="gameLoop();" onkeydown="" onkeyup="moveSelection(event)">
+   
+  <img id="image1" src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg" style="position: absolute; left: 500; right: 200; top: 300; bottom: auto; " height="200" width="200">
+  </body>
+   
+</html>
+
+
+<br><br><br>
+
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t4.ftcdn.net/jpg/02/75/30/47/360_F_275304730_NR3K3HFaLpYLgDMGHgbpdqKiVBNenqr0.jpg">
 
