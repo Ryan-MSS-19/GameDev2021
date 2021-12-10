@@ -123,11 +123,21 @@ function myCheckHit(){
   myClock = setInterval(function(){
       myGlobalX -= 5
       myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody';'image2').style.backgroundPosition = myTemp
+      document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
     
 }">
-
+<input type=button value="Auto image2 Left" onclick="{
+  clearInterval(myClock)
+  let myTemp = '100px 0px'
+  myClock = setInterval(function(){
+      myGlobalX -= 5
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('image2').style.position = myTemp
+  }, 100)
+    
+}">
+  
 
 ><br><br>
    
