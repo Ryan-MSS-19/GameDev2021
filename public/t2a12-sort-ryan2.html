@@ -67,3 +67,45 @@ window.onload = function(){
     document.getElementById("mybutton").onclick = sortID;
 }
       </script>
+
+      
+      
+      
+      
+<!DOCTYPE HTML>
+<html>
+   <body>
+      <script>
+      
+  <input type="button" id="mybutton" value="Sort" />
+Javascript:
+
+var sortID = function () {
+
+    var toSort = document.getElementById('list').children;
+    toSort = Array.prototype.slice.call(toSort, 0);
+
+    toSort.sort(function (a, b) {
+        var aord = +a.id.split('-')[1];
+        var bord = +b.id.split('-')[1];
+        // two elements never have the same ID hence this is sufficient:
+        return (aord > bord) ? 1 : -1;
+    });
+
+    var parent = document.getElementById('list');
+    parent.innerHTML = "";
+
+    for (var i = 0, l = toSort.length; i < l; i++) {
+        parent.appendChild(toSort[i]);
+    }
+
+};
+
+window.onload = function(){
+    document.getElementById("mybutton").onclick = sortID;
+}
+          </script> 
+     </body> 
+</html>
+
+      
