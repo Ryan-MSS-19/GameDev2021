@@ -1,4 +1,4 @@
-Version 0.0.1
+Version 0.0.2
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t4.ftcdn.net/jpg/02/75/30/47/360_F_275304730_NR3K3HFaLpYLgDMGHgbpdqKiVBNenqr0.jpg">
@@ -41,6 +41,20 @@ function myCheckHit(){
    // more if statements here
 
 }
+
+function myXAuto(){
+  document.getElementById('mySpan02').style.left = parseInt(document.getElementById('mySpan02').style.left) + document.myXmove
+  myCheckAll()
+}
+
+document.myXmove = 5   
+document.myYmove = 7
+
+document.myXspeed = 10 
+document.myYspeed = 5 
+
+document.myXtimer = 0;
+document.myYtimer = 0;
 
 
 </script>
