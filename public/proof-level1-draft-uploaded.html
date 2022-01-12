@@ -1,146 +1,275 @@
-<font color=white> Version 0.1.7 </font>
+Version 1.1.1
+<h1 align=center>Level 1</h1>
 
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    
+<h3 align=left><b style="color:white; left:15px"> Use WASD to Move</b></h3>
 
- 
-
-       <script type="text/javascript">
-
-            function leftArrowPressed() {
-                var element = document.getElementById("image1");
-                element.style.left = parseInt(element.style.left) - 15 + 'px';
-            }
-
-            function rightArrowPressed() {
-                var element = document.getElementById("image1");
-                element.style.left = parseInt(element.style.left) + 15 + 'px';
-            }
-
-            function upArrowPressed() {
-                var element = document.getElementById("image1");
-                element.style.top = parseInt(element.style.top) - 15 + 'px';
-            }
-
-            function downArrowPressed() {
-                var element = document.getElementById("image1");
-                element.style.top = parseInt(element.style.top) + 15 + 'px';
-            }
-
-            function moveSelection(event) {                    
-                switch (event.keyCode) {
-                    case 37:
-                        leftArrowPressed();
-                    break;
-
-                    case 39:
-                        rightArrowPressed();
-                    break;
-
-                    case 38:
-                        upArrowPressed();
-                    break;
-
-                    case 40:
-                        downArrowPressed();
-                    break;
-                }
-            };
-
-        function gameLoop()
-        {
-            // change position based on speed
-            moveSelection();
-            setTimeout("gameLoop()",10);
-        }
-
-  </script>
-  </head>
-
-  <body onload="gameLoop();" onkeydown="" onkeyup="moveSelection(event)">
-   
- 
-  <img id="image1" style="position:absolute; width:200px; height:160px; top:425px; left:100px; bottom: auto; "  src="https://s3.amazonaws.com/gameartpartnersimagehost/wp-content/uploads/edd/2015/08/Featured-Image20.png">
-  </body>
-   
-</html>
-
-
-<br><br><br>
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t4.ftcdn.net/jpg/02/75/30/47/360_F_275304730_NR3K3HFaLpYLgDMGHgbpdqKiVBNenqr0.jpg">
 
 
-<br><br><br><br>
+
+
+
+<body onkeydown="{
+ document.all.myText01.value = event.key
+ 
+if (event.key =='d'){
+ document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+myCheckHit()
+}
+if (event.key =='s'){
+ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+myCheckHit()
+}
+if (event.key =='a'){
+ document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
+myCheckHit()
+}
+if (event.key =='w'){
+ document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+myCheckHit()
+}
+}">
+
+
+
+<input id = "myText01" type=text value=0 size=6 > <br>
+
+
+
+
+
+
 
 <script>
 
-   // global variables here
-   let myGlobalX = 0
-   let myClock
+ // global variables here
+ let myGlobalX = 0
+ let myClock
+ let myTimer01
 
-
-   // global functions here
+ // global functions here
 function myHitOther(my1,my2){
-   left1   = parseInt(document.getElementById(my1).style.left)
-   right1  = left1 + parseInt(document.getElementById(my1).style.width)
-   top1    = parseInt(document.getElementById(my1).style.top)   
-   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
-   left2   = parseInt(document.getElementById(my2).style.left)
-   right2  = left2 + parseInt(document.getElementById(my2).style.width)
-   top2    = parseInt(document.getElementById(my2).style.top)   
-   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if ((right1  >=  left2  ) &&      	   
-       (bottom1 >=  top2   ) &&
-       (left1   <=  right2 ) &&
-       (top1    <=  bottom2) ){
-       return true
-   }
+ left1 = parseInt(document.getElementById(my1).style.left)
+ right1 = left1 + parseInt(document.getElementById(my1).style.width)
+ top1 = parseInt(document.getElementById(my1).style.top) 
+ bottom1 = top1 + parseInt(document.getElementById(my1).style.height)
+ left2 = parseInt(document.getElementById(my2).style.left)
+ right2 = left2 + parseInt(document.getElementById(my2).style.width)
+ top2 = parseInt(document.getElementById(my2).style.top) 
+ bottom2 = top2 + parseInt(document.getElementById(my2).style.height)
+ if ((right1 >= left2 ) && 
+ (bottom1 >= top2 ) &&
+ (left1 <= right2 ) &&
+ (top1 <= bottom2) ){
+ return true
+ }
 }
 
 
 function myCheckHit(){
-   if ( myHitOther('image1','image2') ){
-       alert('you lose')
-      //document.getElementById('myImg01').style.left = '20px'
-   }
 
-   // more if statements here
+ if ( myHitOther('myImg01','myImg02') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+ 
+ if ( myHitOther('myImg01','myImg03') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+ 
+ if ( myHitOther('myImg01','myImg06') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg07') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg08') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg09') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg10') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg11') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '150px'
+ } 
+
+ if ( myHitOther('myImg01','myImg12') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '475px'
+ } 
+
+ if ( myHitOther('myImg01','myImg13') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '825px'
+ } 
+
+ if ( myHitOther('myImg01','myImg14') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.top = '20px'
+ } 
+
+ if ( myHitOther('myImg01','myImg15') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.top = '600px'
+ } 
+
+ if ( myHitOther('myImg01','myImg16') ){
+ //alert('you lose')
+ document.getElementById('myImg01').style.left = '20px'
+ } 
+
+
+
+
+
+ if ( myHitOther('myImg03','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg03').style.left = '1450px'
+ } 
+
+ if ( myHitOther('myImg02','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg02').style.left = '1450px'
+ } 
+
+if ( myHitOther('myImg06','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg06').style.left = '1450px'
+ } 
+
+if ( myHitOther('myImg07','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg07').style.left = '1450px'
+ } 
+
+if ( myHitOther('myImg08','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg08').style.left = '1450px'
+ } 
+
+if ( myHitOther('myImg09','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg09').style.left = '1450px'
+ } 
+
+if ( myHitOther('myImg10','myImg05') ){
+ //alert('you lose')
+ document.getElementById('myImg10').style.left = '1450px'
+ } 
+
+
+
+
+
+
+
+
+ // YOU WIN and go to next level!
+ if ( myHitOther('myImg01','myImg04') ){
+ alert('You Win, now go to the next level')
+ document.getElementById('myImg01').style.left = '20px'
+ location = 'T4-Final-Level2-.html'
+ }
+
+ // more if statements here
+
+
+
 
 }
 
 
 </script>
 
-<img id="image2" style="position:absolute; width:200px; height:160px; top:425px; left:500px;" src="http://2.bp.blogspot.com/-8dyMUfw1hmE/TsKGlEZQdUI/AAAAAAAAALI/JDjuKlFvywY/s1600/HoodedBOSS.png">
 
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}">
-<input type=button value="Auto image2 Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('image2').style.position = myTemp
-  }, 100)
-    
-}">
-  
 
-<br><br>
-   
+
+
+<input type=button value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+ clearInterval(myTimer01)
+ myTimer01 = setInterval(function(){
+ document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+ myTimer01 = setInterval(function(){
+ document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+myTimer01 = setInterval(function(){
+ document.getElementById('myImg06').style.left = parseInt(document.getElementById('myImg06').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+myTimer01 = setInterval(function(){
+ document.getElementById('myImg07').style.left = parseInt(document.getElementById('myImg07').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+myTimer01 = setInterval(function(){
+ document.getElementById('myImg08').style.left = parseInt(document.getElementById('myImg08').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+myTimer01 = setInterval(function(){
+ document.getElementById('myImg09').style.left = parseInt(document.getElementById('myImg09').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+myTimer01 = setInterval(function(){
+ document.getElementById('myImg10').style.left = parseInt(document.getElementById('myImg10').style.left) - 10 + 'px'
+ myCheckHit() 
+ }, 50)
+}"><br><br>
+
+
+
+<img id="myImg01" src="https://piskel-imgstore-b.appspot.com/img/7e6ed0ab-7325-11ec-90d5-791934e22189.gif" style="position:absolute; width:40px; height:80px; left: 50px; top:190px;">
+
+<img id="myImg02" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:350px; top:300px;">
+
+<img id="myImg03" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:1200px; top:190px;">
+
+<img id="myImg06" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:50px; top:500px;">
+
+<img id="myImg07" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:750px; top:80px;">
+
+<img id="myImg08" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:700px; top:400px;">
+
+<img id="myImg09" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:600px; top:200px;">
+
+<img id="myImg10" src="https://mario.wiki.gallery/images/thumb/c/cd/BulletBillMK8.png/1200px-BulletBillMK8.png" style="position:absolute; width:100px; height:40px; left:1000px; top:600px;">
+
+
+
+<img id="myImg04" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0PDw0NDQ0NDQ8NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhMSkrOi4uFx8/ODMsNyg5LisBCgoKDQ0NFQ8PFS0dFR0rKy0tLSstLS0tLSsrLS0tKy03LSstMCs3LS0rLSsrLSs3Ny0rLS0tLTc3Ky0rLSsrK//AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIG/8QAGRABAQEAAwAAAAAAAAAAAAAAAAERMUHx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEG/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AOxgDEMUYYEAIAAABAAAAAAoAFRQAAAVAAUEBQQAAACgAAoCAAYGACyIAAABQBFEBayK0ioAqQAhTCgAAAABQAVAKAAAIAAACioAAAAaAqQAAAAAAEABSAAKhAFQAAEABSgAAAFAANBAAUBAUACBF9AJnaGlKAQAAAFBAAAMAAgAAgAAqAotRQRUAAABUAAAAACgAABAAAABQQgIACgqABoAAAAAKgBoAAAAqABAAAAAFEAAAAAKBgCoAAAAAqAAAiBQVUi0AAAABAAU0pQAgAAAEAAAAAAgQAVAAoAuIoIIqIAKALBUAARURFCCqAAAAAAVFAAAABFQBRUUEFxAAAVKAAKCLENBFRUQVBVAIABAABABAAUVAFFEoLSIAAAAQAFBF1AFtQAAAAAAAEVQQBEAFAAUoAKgUAAQAAAooAAACoAAAAACoAaAAUAABAFFEADRFiIBooUCAKgKFAAAQIAoKmAsEIAt4QgEAACLASgABoCpAgAABAAFQAARFgIAAAAAoCCiqIAgAKAAAAKAiAAQACigqACAABQAAAAAUBX/2Q==" style="position:absolute; width:50px; height:695px; left:1551px; top:00px;">
+
+<img id="myImg05" src="https://w7.pngwing.com/pngs/560/424/png-transparent-gold-and-silver-bullet-illustration-enter-the-gungeon-playstation-4-sprite-bullets-game-video-game-souls.png" style="position:absolute; width:1px; height:695px; left:0px; top:0px;">
+
+<img id="myImg11" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:10px; height:500px; left:300px; top:0px;">
+
+<img id="myImg12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:10px; height:500px; left:650px; top:195px;">
+
+<img id="myImg13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:10px; height:500px; left:1000px; top:0px;">
+
+<img id="myImg14" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:1551px; height:10px; left:0px; top:0px;">
+
+<img id="myImg15" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:1551px; height:10px; left:0px; top:685px;">
+
+<img id="myImg16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII=" style="position:absolute; width:10px; height:695px; left:0px; top:0px;">
+
    
 
    
